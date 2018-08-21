@@ -1,4 +1,8 @@
 class WatchesController < ApplicationController
+
+  def home
+  end
+
   def index
     @watches = Watch.all
   end
