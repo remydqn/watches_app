@@ -38,8 +38,8 @@
             </div>
 
             <div class="card-user">
-              <img src="http://via.placeholder.com/150x150" alt="avatar">
-              <p><%= watch.user %></p>
+              <img src="<%= watch.user.image || 'http://via.placeholder.com/150x150' %>" alt="avatar">
+              <p><%= watch.user.name %></p>
             </div>
           </div>
         </div>
