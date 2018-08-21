@@ -1,14 +1,24 @@
-<div class="container">
-  <h1 class="text-center">List of watches</h1>
-
 <!-- barre criteres -->
-
-
-
+  <div class="dropdown">
+    <div class="row">
+      <% 10.times do %>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          CRITERE
+        </button>
+        <div class="dropdown-menu" aria-labelledby="BRAND">
+          <a class="dropdown-item" href="#">Action</a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 <!-- cards -->
 
+
+<div class="container">
+  <h1 class="text-center">List of watches</h1>
   <div class="cards">
     <div class="row">
       <% 3.times do %>
