@@ -127,7 +127,7 @@ puts "création des watch"
   )
 
  Watch.create!(
-   name: "megane watch",
+   name: "Megan watch",
    brand:"cartier",
    price: 1000,
    location: "Cannes",
