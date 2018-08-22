@@ -29,7 +29,7 @@ maxime = User.create!(email: "maximepdm@gmail.com", password: "maximep", name:"m
 puts "création des watch"
 
   Watch.create!(
-    name: "sarkozy watch",
+    name: "Sarkozy watch",
     brand:"rolex",
     price: 200,
     location: "Lyon, place bellcour",
@@ -56,7 +56,7 @@ puts "création des watch"
     user_id: remy.id
   )
   Watch.create!(
-    name: "audemars watch",
+    name: "Audemars watch",
     brand:"audemars piguet",
     price: 65,
     location: "Lyon, croix rousse",
@@ -84,7 +84,7 @@ puts "création des watch"
   )
 
   Watch.create!(
-    name: "aviator watch",
+    name: "Aviator watch",
     brand:"breitling",
     price: 30,
     location: "Lyon, fourviere",
