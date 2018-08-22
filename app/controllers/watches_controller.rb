@@ -25,6 +25,19 @@ class WatchesController < ApplicationController
     end
   end
 
+  def edit
+    @watch = Watch.find(params[:id])
+  end
+
+  def update
+    @watch = Watch.find(params[:id])
+    if @watch.update(watch_params)
+      redirect_to watch_path(@watch)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def watch_params
