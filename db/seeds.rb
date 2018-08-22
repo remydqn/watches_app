@@ -33,7 +33,7 @@ puts "création des watch"
     brand:"rolex",
     price: 200,
     location: "Lyon, place bellcour",
-    style: "cérémonie",
+    style: "ceremony",
     gender: "man",
     color:"white",
     material:"acier",
@@ -47,7 +47,7 @@ puts "création des watch"
     brand:"rolex",
     price: 52,
     location: "Paris, arc de triomphe",
-    style: "cérémonie",
+    style: "ceremony",
     gender: "women",
     color:"blue",
     material:"diamonds",
@@ -55,10 +55,9 @@ puts "création des watch"
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: remy.id
   )
-
   Watch.create!(
-    name: "Audemars watch",
-    brand:"Audemars Piguet",
+    name: "audemars watch",
+    brand:"audemars piguet",
     price: 65,
     location: "Lyon, croix rousse",
     style: "design",
@@ -132,7 +131,7 @@ puts "création des watch"
    brand:"cartier",
    price: 1000,
    location: "Cannes",
-   style: "cérémonie",
+   style: "ceremony",
    gender: "women",
    color:"white",
    material:"acier",
@@ -147,7 +146,7 @@ puts "création des watch"
    price: 500,
    location: "Lyon",
    style: "vintage",
-   gender: "homme",
+   gender: "man",
    color:"red",
    material:"leather",
    image:"https://lovetime.fr/wp-content/uploads/2014/02/blancpain-leman-flyback-chronograph-2885f-1130-53b-watch-470x400.jpg",
@@ -157,18 +156,17 @@ puts "création des watch"
 
   Watch.create!(
     name: "Remy le berlinois",
-    brand:"Patek Philippe",
+    brand:"patek philippe",
     price: 1000,
     location: "Lyon, la part dieu",
-    style: "bling_bling",
-    gender: "homme",
+    style: "bling bling",
+    gender: "man",
     color:"gold",
     material:"acier",
     image:"https://www.magmontres.fr/wp-content/uploads/2015/04/Patek-5175.jpg",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: joseph.id
   )
-
 puts "creation booking"
 
 ids = Watch.pluck(:id)
@@ -176,22 +174,25 @@ ids = Watch.pluck(:id)
 Booking.create!(
   user_id:kevin.id,
   watch_id: ids.sample,
+  start_at: "20181126101008"
   )
 
 Booking.create!(
   user_id:remy.id,
   watch_id:ids.sample,
+  start_at: "20181126101008"
   )
 
 Booking.create!(
   user_id:mathieu.id,
   watch_id:ids.sample,
+  start_at: "20181126101008"
   )
 
 Booking.create!(
   user_id:ben.id,
   watch_id:ids.sample,
-
+  start_at: "20181126101008"
   )
 
 
