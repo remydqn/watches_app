@@ -9,20 +9,20 @@ Booking.destroy_all
 Watch.destroy_all
 User.destroy_all
 
-
 puts "creation des users"
 
-ben = User.create!(email: "benjaminjolivot@orange.fr", password: "benjoli")
+ben = User.create!(email: "benjaminjolivot@orange.fr", password: "benjoli", name: "benbaker", image:"https://avatars3.githubusercontent.com/u/40176179?s=460&v=4" )
 
-remy = User.create!(email: "remywinehouse@free.fr", password: "remywine")
+remy = User.create!(email: "remywinehouse@free.fr", password: "remywine", name:"remymy", image:"https://avatars3.githubusercontent.com/u/40638311?s=460&v=4")
 
-joseph = User.create!(email: "josephta@gmail.com", password: "josepht")
+joseph = User.create!(email: "josephta@gmail.com", password: "josepht", name:"joseph", image: "https://avatars2.githubusercontent.com/u/5313828?s=460&v=4")
 
-mathieu = User.create!(email: "cartosnet@gmail.com", password: "cartosn")
+mathieu = User.create!(email: "cartosnet@gmail.com", password: "cartosn", name:"mathc", image:"https://avatars3.githubusercontent.com/u/25009165?s=460&v=4")
 
-kevin = User.create!(email: "kevcha@sfr.fr", password: "kevcha")
+kevin = User.create!(email: "kevcha@sfr.fr", password: "kevcha", name:"kevlemoine", image:"https//avatars2.githubusercontent.com/u/472453?s=460&v=4")
 
-maxime = User.create!(email: "maximepdm@gmail.com", password: "maximep")
+maxime = User.create!(email: "maximepdm@gmail.com", password: "maximep", name:"maxpdm", image:"https://avatars2.githubusercontent.com/u/32811068?s=460&v=4")
+
 
 
 
