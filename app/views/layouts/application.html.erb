@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>WATCHES AIRBNB</title>
+    <title>WatchesBNB</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar'%>
+
+
     <%= yield %>
+    <%= render 'shared/footer'%>
+    
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+
+
+
+
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCAafv-kF08Q2w3Kyj5ykIh1CW4u4_gn4Q" %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag "map" %>
+
+
   </body>
 </html>
