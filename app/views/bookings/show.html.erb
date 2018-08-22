@@ -1,7 +1,16 @@
-<%=@booking.watch.brand %>
-  <!-- <img src=<%=@booking.watch.image %> alt=""> -->
-<%=@booking.watch.description %>
-<%=@booking.start_at %>
+<div class="test"><h2>Votre réservation</h2>
 
-<h2>Votre réservation</h2>
+<div class="row">
 
+
+
+
+</div>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <%= render 'shared/card_booking_confirmation', booking: @booking %>
+  </div>
+</div>
+<!-- <a href="#" class="btn-medium">Write a story</a>
+ -->
+</div>

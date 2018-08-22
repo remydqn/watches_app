@@ -28,7 +28,7 @@ maxime = User.create!(email: "maximepdm@gmail.com", password: "maximep", name:"m
 
 puts "création des watch"
 
-  Watch.create!(
+  sarkozy = Watch.create!(
     name: "sarkozy watch",
     brand:"rolex",
     price: 200,
@@ -42,7 +42,7 @@ puts "création des watch"
     user_id: ben.id
   )
 
-  Watch.create!(
+  carla =  Watch.create!(
     name: "Carla watch",
     brand:"rolex",
     price: 52,
@@ -52,10 +52,10 @@ puts "création des watch"
     color:"blue",
     material:"diamonds",
     image:"https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m86285-0001.png?impolicy=upright-majesty",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+    description:"rolex qui se caractérise par la splendeur de son cadran et les somptueux diamants",
     user_id: remy.id
   )
-  Watch.create!(
+  audemars = Watch.create!(
     name: "audemars watch",
     brand:"audemars piguet",
     price: 65,
@@ -69,7 +69,7 @@ puts "création des watch"
     user_id: mathieu.id
   )
 
-  Watch.create!(
+ mourinho = Watch.create!(
     name: "Mourinho hublot",
     brand:"hublot",
     price: 150,
@@ -83,7 +83,7 @@ puts "création des watch"
     user_id: kevin.id
   )
 
-  Watch.create!(
+  aviator = Watch.create!(
     name: "aviator watch",
     brand:"breitling",
     price: 30,
@@ -97,7 +97,7 @@ puts "création des watch"
     user_id: joseph.id
   )
 
- Watch.create!(
+ nadal = Watch.create!(
    name: "Nadal watch",
    brand:"richard mille",
    price: 500,
@@ -112,7 +112,7 @@ puts "création des watch"
 
   )
 
-  Watch.create!(
+  novak = Watch.create!(
     name: "Novak watch",
     brand:"seiko",
     price: 80,
@@ -122,11 +122,11 @@ puts "création des watch"
     color:"black",
     material:"acier",
     image:"http://static2.worldtempus.com/cache/article/s/e/seiko_djokovic_cover_crop_800x600.jpg",
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
+    description:"Cet incontournable de la marque Seiko associe l’élégance à l’innovation ",
     user_id: ben.id
   )
 
- Watch.create!(
+megane = Watch.create!(
    name: "megane watch",
    brand:"cartier",
    price: 1000,
@@ -140,7 +140,7 @@ puts "création des watch"
    user_id: mathieu.id
   )
 
- Watch.create!(
+ poutine = Watch.create!(
    name: "Poutine watch",
    brand:"blancpain",
    price: 500,
@@ -154,7 +154,7 @@ puts "création des watch"
    user_id: kevin.id
   )
 
-  Watch.create!(
+  remywatch = Watch.create!(
     name: "Remy le berlinois",
     brand:"patek philippe",
     price: 1000,
@@ -169,29 +169,30 @@ puts "création des watch"
   )
 puts "creation booking"
 
-ids = Watch.pluck(:id)
 
 Booking.create!(
   user_id:kevin.id,
-  watch_id: ids.sample,
+  watch_id: sarkozy.id,
   start_at: "20181126101008"
   )
 
+p "================="
+p remy
 Booking.create!(
   user_id:remy.id,
-  watch_id:ids.sample,
+  watch_id:carla.id,
   start_at: "20181126101008"
   )
 
 Booking.create!(
   user_id:mathieu.id,
-  watch_id:ids.sample,
+  watch_id:poutine.id,
   start_at: "20181126101008"
   )
 
 Booking.create!(
   user_id:ben.id,
-  watch_id:ids.sample,
+  watch_id:megane.id,
   start_at: "20181126101008"
   )
 
