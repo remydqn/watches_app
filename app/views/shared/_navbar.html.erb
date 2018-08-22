@@ -6,11 +6,9 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Rent your watch</a>
+    <%= link_to "Rent your watch", new_watch_path , class:"navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Profile picture with dropdown list -->
-
     <% if user_signed_in? %>
 
     <div class="navbar-wagon-item">
