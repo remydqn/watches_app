@@ -11,7 +11,7 @@ class Watch < ApplicationRecord
   validates :style, inclusion: { in: ["city chic", "sportswear", "ceremony", "vintage", "design", "bling bling"]}
   validates :gender, inclusion: { in: %w(man woman)}
   validates :material, inclusion: { in: %w(carbonne leather acier silicone gold diamonds silver)}
-  validates :image
+  # validates :image
   validates :price, numericality: true
 
 end
