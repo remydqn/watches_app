@@ -14,16 +14,6 @@
   <body>
     <%= render 'shared/navbar'%>
 
-    <hr>
-
-    <% if user_signed_in? %>
-      connecté en tant que: <%= current_user.email %>
-    <% else %>
-      Pas connecté
-    <% end %>
-
-    <hr>
-
 
     <%= yield %>
     <%= javascript_include_tag 'application' %>

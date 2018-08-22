@@ -19,7 +19,7 @@ joseph = User.create!(email: "josephta@gmail.com", password: "josepht", name:"jo
 
 mathieu = User.create!(email: "cartosnet@gmail.com", password: "cartosn", name:"mathc", image:"https://avatars3.githubusercontent.com/u/25009165?s=460&v=4")
 
-kevin = User.create!(email: "kevcha@sfr.fr", password: "kevcha", name:"kevlemoine", image:"https//avatars2.githubusercontent.com/u/472453?s=460&v=4")
+kevin = User.create!(email: "kevcha@sfr.fr", password: "kevcha", name:"kevlemoine", image:"https://avatars2.githubusercontent.com/u/472453?s=460&v=4")
 
 maxime = User.create!(email: "maximepdm@gmail.com", password: "maximep", name:"maxpdm", image:"https://avatars2.githubusercontent.com/u/32811068?s=460&v=4")
 
