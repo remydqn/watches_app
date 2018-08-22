@@ -19,18 +19,11 @@
 
     <%= yield %>
     <%= render 'shared/footer'%>
-    
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-
-
-
 
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCAafv-kF08Q2w3Kyj5ykIh1CW4u4_gn4Q" %>
     <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag "map" %>
-
 
   </body>
 </html>
