@@ -2,6 +2,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :watch
 
- validates :name, :watch, presence: true
+ validates :user_id, :watch_id, :start_at, presence: true
+
+
 
 end
