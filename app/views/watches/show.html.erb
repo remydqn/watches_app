@@ -1,0 +1,75 @@
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<div class="container">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Carousel indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for carousel items -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126334-0014.png?impolicy=upright-majesty" alt="First Slide">
+        </div>
+        <div class="item">
+            <img src="https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126334-0014.png?impolicy=upright-majesty" alt="Second Slide">
+        </div>
+        <div class="item">
+            <img src="https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126334-0014.png?impolicy=upright-majesty" alt="Third Slide">
+        </div>
+    </div>
+    <!-- Carousel controls -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
+</div>
+
+<div class="container">
+
+  <div class="row watch-description">
+    <div class="col-xs-8">
+      <div class="content">
+        <h1><strong>Name : </strong><%= @watch.name %></h1>
+        <h2><strong>Description : </strong><%= @watch.description %></h2>
+        <p><strong> Material : </strong><%= @watch.material %></p>
+        <p><strong> Brand : </strong><%= @watch.brand %></p>
+        <p><strong> Color : </strong><%= @watch.color %></p>
+        <p><strong> Price : </strong><%= @watch.price %>€</p>
+      </div><!-- content-->
+    </div><!--col-xs-6 -->
+    <div class="col-xs-4 form-watch">
+      <div class="watch-price">
+        <p><strong><%= @watch.price %></strong>€ par jour </p>
+      </div>
+      <div class="form_for">
+        <div class="date_1">
+          <%= form_tag("/search", method: "get") do %>
+            <%= label_tag(:q, "Date de début:") %>
+            <%= date_field_tag(:q) %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form_for">
+        <div class="date_2">
+          <%= form_tag("/search", method: "get") do %>
+            <%= label_tag(:q, "Date de fin:") %>
+            <%= date_field_tag(:q) %>
+          <% end %>
+        </div>
+      </div>
+        <div class="button-watch">
+          <%= link_to 'Demande de réservation', watches_path %>
+          <%= submit_tag("Demande de réservation") %>
+        </div>
+      </div><!-- form_for-->
+    </div><!-- col-xs-6-->
+  <!-- row-->
+</div><!-- container-->
+

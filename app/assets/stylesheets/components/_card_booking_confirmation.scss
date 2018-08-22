@@ -1,0 +1,28 @@
+.card_booking_confirmation {
+  background: #FEFEFE;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-radius: 30px;
+  border-style: groove;
+  height: 360px;
+
+
+
+  img {
+    width: 200px;
+  }
+
+  .informations {
+    background-color: #FEFEFE;
+    padding: 30px;
+  }
+
+  .price {
+    background-color: #FEFEFE;
+    width: 125px;
+    padding: 5px;
+  }
+}
+

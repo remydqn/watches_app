@@ -4,12 +4,13 @@
     <p>Louer une montre de luxe<strong> sans vous ruiner !</strong></p>
 <!--     <a class="btn btn-primary btn-lg">Start now</a> -->
   <!-- Search a city form -->
-    <div class="form">
-      <form action="/action_page.php">
-        <input type="text" name="search" placeholder="Choose a city"><br><br>
-        <input class="button" type="submit" value="Find a watch">
-      </form>
-    </div>
+
+
+    <%= form_tag(watches_path, method: :get) do %>
+      <input class="form-control form-control-lg" type="text" placeholder="Type a city" id="watch_address" name="watch_address">
+      <input class="button" type="submit" value="Find a watch">
+    <% end %>
+
 
   </div>
 </div>

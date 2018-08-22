@@ -1,0 +1,46 @@
+.carousel-inner {
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    height:  400px;
+    width: 1100px;
+}
+
+.container h1 {
+  color: gray;
+  font-family: Raleway;
+}
+
+.container h2 {
+  color: black;
+  font-family: Raleway;
+}
+
+.container_1{
+   display: flex;
+  flex-direction: row;
+
+}
+
+.form_for {
+display: flex;
+align-items: center;
+text-align: center;
+}
+
+.watch-description {
+padding-top: 40px;
+}
+
+.form-watch {
+padding: 10px;
+box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+}
+
+.form_for {
+padding: 10px;
+}
+

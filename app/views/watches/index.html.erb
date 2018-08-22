@@ -1,2 +1,36 @@
-<p>PAGE INDEX</p>
+
+
+<!-- cards -->
+
+
+<div class="container">
+  <h1 class="text-center">List of watches</h1>
+  <div class="cards">
+    <div class="row">
+      <% @watches.each do |watch|%>
+        <div class="col-xs-12 col-sm-4">
+
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image" style="background: url(<%= watch.image %>);">
+                  <div class="hidden-description" >
+                    <h3><%= watch.name %></h3>
+                    <p class="lorem-et-hardy"><%= watch.description %></p>
+                    <button type="button" class="btn btn-light"><%= link_to "See this watch", watch_path(watch) %></button>
+
+                  </div>
+                </div>
+                <ul class="card-stats"></ul>
+              </div>
+              <div class="card-user">
+                <img src="<%= watch.user.image || 'http://via.placeholder.com/150x150' %>" alt="avatar">
+                <p><%= watch.user.name %></p>
+              </div>
+            </div>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
