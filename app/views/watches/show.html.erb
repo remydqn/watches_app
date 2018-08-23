@@ -43,6 +43,9 @@
         <p><strong> Color : </strong><%= @watch.color %></p>
         <p><strong> Price : </strong><%= @watch.price %>€</p>
       </div><!-- content-->
+      <div>
+        <%= link_to "Edit", edit_watch_path(@watch.id) %>
+      </div>
     </div><!--col-xs-6 -->
     <div class="col-xs-4 form-watch">
       <div class="watch-price">
@@ -65,6 +68,7 @@
         </div>
       </div>
         <div class="button-watch">
+          <%= link_to 'Demande de réservation', watches_path %>
           <%= submit_tag("Demande de réservation") %>
         </div>
       </div><!-- form_for-->
