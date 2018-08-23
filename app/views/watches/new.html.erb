@@ -8,17 +8,30 @@
 
           <%= f.input :name %>
           <%= f.input :description %>
-          <%= f.input :brand %>
-          <%= f.input :gender %>
-          <%= f.input :style %>
+          <%= f.input :brand, :collection => ["Rolex", "Richard Mille", "Cartier", "Patek Philippe", "Audemars Piguet", "Blancpain", "Seiko", "Hublot", "Breitling"] %>
+          <%= f.input :gender, :collection => ["Man", "Woman", "Unisex"]%>
+          <%= f.input :style, :collection => ["City Chic", "Sportswear", "Ceremony", "Vintage", "Design", "Bling Bling"]%>
           <%= f.input :price %>
-          <%= f.input :color %>
-          <%= f.input :material %>
+          <%= f.input :color, :collection => ["Yellow", "Gold", "White", "Black", "Blue", "Red", "Grey", "Brown"] %>
+          <%= f.input :material, :collection => ["Carbonne", "Leather", "Acier", "Silicone", "Gold", "Diamonds", "Silver"] %>
           <%= f.input :location %>
+          <%= f.file_field :image %>
           <%= f.button :submit %>
       <% end %>
     </div>
   </div>
 
 </div>
+<!--
 
+<div class="form-group">
+    <select class="custom-select" required>
+      <option value="">Open this select menu</option>
+      <option value="1">Rolex</option>
+      <option value="2">Rolex</option>
+      <option value="3">Rolex</option>
+    </select>
+    <div class="invalid-feedback">Example invalid custom select feedback</div>
+  </div>
+
+ -->
