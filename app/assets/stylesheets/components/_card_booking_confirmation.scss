@@ -1,13 +1,51 @@
 .card_booking_confirmation {
-  background: #FEFEFE;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
-  border-radius: 30px;
-  border-style: groove;
-  height: 360px;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+ }
 
+.card_booking_confirmation_description {
+  width: 30%;
+  text-align: left;
+
+  h2 {
+    margin: 0;
+    }
+
+  h3{
+    padding-left: 0;
+    text-align: left;
+  }
+
+ .btn-danger {
+    background-color: white;
+    border-color: #333333;
+    color: #333333;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  p{
+    text-align: left;
+  }
+
+  .date{
+    color: #888;
+  }
+}
+
+
+.card_booking_confirmation_photo{
+
+  h2 {
+    padding-bottom: 130px;
+    color: #262525;
+  }
 
 
   img {
@@ -28,3 +66,4 @@
     padding: 5px;
   }
 }
+
