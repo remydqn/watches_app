@@ -1,12 +1,18 @@
-.carousel-inner {
+// .carousel-inner {
 
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    height:  400px;
-    width: 1100px;
+//     text-align: center;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-bottom: 10px;
+//     height:  400px;
+//     width: 1100px;
+// }
+
+.caroussel-image {
+  background-size: cover;
+  height: 400px;
+  background-position: center;
 }
 
 .content {
