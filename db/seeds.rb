@@ -202,7 +202,7 @@ p "1================="
 
 Booking.create(
   user_id:remy.id,
-  watch_id:carla.id,
+  watch_id:joseph.id,
   start_at: "20181126101008"
   )
 

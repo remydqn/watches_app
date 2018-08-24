@@ -2,26 +2,33 @@
 <div class="index-body">
 <h1> My bookings</h1>
 
-<h2> My watches on rent </h2>
-<!-- A COMPLETER
- -->
-<% @customer_bookings.name %>
-PHOTO - NAME WATCH - PRICE - FROM DAY TO DAY
+<h2> THE WATCHES I RECEIVED ON RENT </h2>
 
+<% @customer_bookings.each do |booking|%>
 
-<h2> The watches i rented </h2>
-<!-- A COMPLETER
- -->
-<% @owner_watches.each do |watch| %>
-  <h1><%= watch.name %></h1>
-  <%= watch.bookings.first %>
-
-
+<%= cl_image_tag(booking.watch.image, width: 100, height: 100, crop: :fill) %> - <%= booking.watch.name %> - <%= booking.watch.price %> €
 <% end %>
 
------------
 
-PHOTO - NAME WATCH - PRICE - FROM DAY TO DAY - BUTTON UPDATE - BUTTON DELETE
+
+
+<h2> THE WATCHES I PROPOSE ON RENT </h2>
+
+<p>MY WATCHES NO RENTED</p>
+<!--     watch.bookings.first
+ -->
+<% @owner_watches.each do |watch| %>
+  <%= cl_image_tag(watch.image, width: 100, height: 100, crop: :fill) %> - <%= watch.name %> - <%= watch.price %> €
+  <span><button type="button" class="btn btn-primary">Update</button></span>
+  <span><button type="button" class="btn btn-danger">Delete</button></span>
+  <p></p>
+<% end %>
+
+
+<p>MY WATCHES WITH A RENTAL PROPOSITION</p>
+
+
+
 
 
 </div>
