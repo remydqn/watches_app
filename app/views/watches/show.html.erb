@@ -1,34 +1,38 @@
-<head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</head>
+
 <div class="container">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Carousel indicators -->
+
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     </ol>
-    <!-- Wrapper for carousel items -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <%= cl_image_tag @watch.image, height: 300, width: 400, crop: :fill %>
-        </div>
-       <!--  <div class="item">
-            <img src="https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126334-0014.png?impolicy=upright-majesty" alt="Second Slide">
-        </div>
-        <div class="item">
-            <img src="https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126334-0014.png?impolicy=upright-majesty" alt="Third Slide"> -->
-        </div>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="caroussel-image" style="background-image: url('<%= cl_image_path @watch.image, height: 1000, crop: :fill; %>');"></div>
+        <%#= cl_image_tag @watch.image %>
+      </div>
+      <div class="item">
+        <div class="caroussel-image" style="background-image: url('<%= cl_image_path @watch.image, height: 1000, crop: :fill; %>');"></div>
+        <%#= cl_image_tag @watch.image %>
+      </div>
     </div>
-    <!-- Carousel controls -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
     </a>
-</div>
+  </div>
+
 </div>
 
 <div class="container">
@@ -37,14 +41,28 @@
     <div class="col-xs-8">
       <div class="content">
         <h1><strong>Name : </strong><%= @watch.name %></h1>
+
         <h2><strong>Description : </strong><%= @watch.description %></h2>
-        <p><strong> Material : </strong><%= @watch.material %></p>
-        <p><strong> Brand : </strong><%= @watch.brand %></p>
-        <p><strong> Color : </strong><%= @watch.color %></p>
-        <p><strong> Price : </strong><%= @watch.price %>€</p>
+
+        <h2><strong> Material : </strong><%= @watch.material %></h2>
+
+        <h2><strong> Brand : </strong><%= @watch.brand %></h2>
+
+        <h2><strong> Color : </strong><%= @watch.color %></h2>
+      <div class="h2">
+          <h2><strong> Price : </strong><%= @watch.price %>€</h2>
+      </div>
+        <h2><strong> Gender : </strong><%= @watch.gender %></h2>
       </div><!-- content-->
-      <div>
+
+      <div class="button">
         <%= link_to "Edit", edit_watch_path(@watch.id) %>
+      </div>
+
+      <div>
+        <% if current_user %>
+          <%= link_to "Delete", watch_path(@watch), method: :delete, data: {confirm: "Are you sure yo #{current_user.name} ? Sure of what you doin you crazy ?"} %>
+        <% end %>
       </div>
     </div><!--col-xs-6 -->
     <div class="col-xs-4 form-watch">
@@ -52,13 +70,14 @@
         <p><strong><%= @watch.price %></strong>€ par jour </p>
       </div>
       <div class="form_for">
-        <div class="date_1">
-          <%= form_tag("/search", method: "get") do %>
-            <%= label_tag(:q, "Date de début:") %>
-            <%= date_field_tag(:q) %>
+        <div style="border: 1px solid red">
+          <%= simple_form_for([@watch, @booking]) do |f| %>
+            <%= f.input :start_at %>
+            <%= f.button :submit %>
           <% end %>
         </div>
       </div>
+
       <div class="form_for">
         <div class="date_2">
           <%= form_tag("/search", method: "get") do %>
@@ -68,10 +87,12 @@
         </div>
       </div>
         <div class="button-watch">
-          <%= link_to 'Demande de réservation', watches_path %>
-          <%= submit_tag("Demande de réservation") %>
+          <%= link_to 'Demande de réservation', booking_path %>
         </div>
+
       </div><!-- form_for-->
+
+
     </div><!-- col-xs-6-->
   <!-- row-->
 </div><!-- container-->

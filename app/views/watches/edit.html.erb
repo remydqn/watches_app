@@ -4,15 +4,18 @@
   <div class="row">
     <div class="class col-xs-12 col-sm-6 col-ls-3 col-lg-offset-3">
       <%= simple_form_for @watch do |f| %>
+
           <%= f.input :name %>
           <%= f.input :description %>
-          <%= f.input :brand %>
-          <%= f.input :gender %>
-          <%= f.input :style %>
+          <%= f.input :brand, :collection => ["Rolex", "Richard Mille", "Cartier", "Patek Philippe", "Audemars Piguet", "Blancpain", "Seiko", "Hublot", "Breitling"] %>
+          <%= f.input :gender, :collection => ["Man", "Woman", "Unisex"]%>
+          <%= f.input :style, :collection => ["City Chic", "Sportswear", "Ceremony", "Vintage", "Design", "Bling Bling"]%>
           <%= f.input :price %>
-          <%= f.input :color %>
-          <%= f.input :material %>
-          <%= f.input :location %>
+          <%= f.input :color, :collection => ["Yellow", "Gold", "White", "Black", "Blue", "Red", "Grey", "Brown"] %>
+          <%= f.input :material, :collection => ["Carbonne", "Leather", "Acier", "Silicone", "Gold", "Diamonds", "Silver"] %>
+          <%= f.input :address %>
+          <%= f.input :image %>
+          <%= f.input :image_cache, as: :hidden %>
           <%= f.button :submit %>
       <% end %>
     </div>
