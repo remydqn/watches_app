@@ -28,15 +28,23 @@
   padding-bottom: 10px;
 }
 
-.btn_home_modif  {
-  .banner-content {
-     background-color: white;
-     border-color: #333333;
-     color: #333333;
-     padding-bottom: 10px;
 
-   &:hover {
-     opacity: 0.5;
-   }
+
+.btn_home_modif{
+  .toto {
+  background-color: white !important;
+  border-color: #333333 !important;
+  color: #333333 !important;
+  margin: 20px !important;
+  padding: 12px 40px 12px 40px;
+  font-weight: bolder !important;
+  font-size:1.2em !important;
+  color: #495057 !important;
+  }
+
+  :hover {
+    opacity: 0.5;
   }
 }
+
+
