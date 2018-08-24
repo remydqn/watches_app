@@ -2,7 +2,7 @@
   <div class="card_booking_confirmation_description">
       <h4>Votre réservation : </h4>
       <h2 ><%= booking.watch.brand %></h2>
-      <h4 class="date">26.11.2018 au 27.11.2018</h4>
+      <h4 class="date"><%= @booking.start_at.strftime("%d-%m-%Y") %></h4>
       <p class="po"><%= booking.watch.description %></p>
       <h4><%= booking.watch.price %> €</h4>
       <div class="btn btn-danger">paiement</div>

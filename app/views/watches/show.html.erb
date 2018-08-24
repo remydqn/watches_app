@@ -77,18 +77,11 @@
           <% end %>
       </div>
 
-          <center>
-      <div class="form_for">
-        <div class="date_2">
+<!--
+        <div class="button-watch">
+          <%= link_to 'Demande de réservation', booking_path %>
+        </div> -->
 
-          <%= form_tag("/search", method: "get") do %>
-            <%= label_tag(:q, "Date de fin:") %><br>
-            <%= date_field_tag(:q) %>
-          <% end %>
-        </div>
-      </div>
-          </center>
-          <%= link_to 'Demande de réservation', booking_path, class: "btn button-watch" %>
 
       </div><!-- form_for-->
 
