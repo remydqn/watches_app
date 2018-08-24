@@ -1,0 +1,27 @@
+
+<div class="index-body">
+<h1> My bookings</h1>
+
+<h2> My watches on rent </h2>
+<!-- A COMPLETER
+ -->
+<% @customer_bookings.name %>
+PHOTO - NAME WATCH - PRICE - FROM DAY TO DAY
+
+
+<h2> The watches i rented </h2>
+<!-- A COMPLETER
+ -->
+<% @owner_watches.each do |watch| %>
+  <h1><%= watch.name %></h1>
+  <%= watch.bookings.first %>
+
+
+<% end %>
+
+-----------
+
+PHOTO - NAME WATCH - PRICE - FROM DAY TO DAY - BUTTON UPDATE - BUTTON DELETE
+
+
+</div>

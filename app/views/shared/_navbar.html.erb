@@ -7,6 +7,10 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <%= link_to "Rent your watch", new_watch_path , class:"navbar-wagon-item navbar-wagon-link" %>
+    <% if user_signed_in? %>
+
+    <%= link_to "View my bookings", bookings_path , class:"navbar-wagon-item navbar-wagon-link" %>
+    <% end %>
 
     <!-- Profile picture with dropdown list -->
     <% if user_signed_in? %>
@@ -17,14 +21,14 @@
 
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li><a href="#">My bookings</a></li>
-            <li><a href="#">   <%= link_to "log out test", destroy_user_session_path, method: :delete %> </a></li>
+            <li><a href="#">   <%= link_to "Log out", destroy_user_session_path, method: :delete %> </a></li>
 <!--             class: "navbar-wagon-item navbar-wagon-link"
  -->          </ul>
         </div>
     </div>
 
     <% else %>
-   <%= link_to "log in", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link"  %>
+   <%= link_to "Login", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link"  %>
   <% end %>
 
   </div>

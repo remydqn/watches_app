@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
+gem 'carrierwave'
+gem 'cloudinary'
 gem 'devise'
 
 gem 'bootsnap', require: false
