@@ -1,34 +1,22 @@
+<div class="container">
 
 <div class="index-body">
-<h1> My bookings</h1>
+  <h1>My bookings</h1>
+  <br>
+  <br>
+  <div class="card_booking_index">
 
-<h2> THE WATCHES I RECEIVED ON RENT </h2>
+  <% @customer_bookings.each do |booking|%>
 
-<% @customer_bookings.each do |booking|%>
+  <%= cl_image_tag(booking.watch.image, width: 100, height: 100, crop: :fill) %> - <%= booking.watch.name %> - <%= booking.watch.price %> € -
+  <% end %>
 
-<%= cl_image_tag(booking.watch.image, width: 100, height: 100, crop: :fill) %> - <%= booking.watch.name %> - <%= booking.watch.price %> €
-<% end %>
-
-
-
-
-<h2> THE WATCHES I PROPOSE ON RENT </h2>
-
-<p>MY WATCHES NO RENTED</p>
-<!--     watch.bookings.first
- -->
-<% @owner_watches.each do |watch| %>
+  <% @owner_watches.each do |watch| %>
   <%= cl_image_tag(watch.image, width: 100, height: 100, crop: :fill) %> - <%= watch.name %> - <%= watch.price %> €
-  <span><button type="button" class="btn btn-primary">Update</button></span>
-  <span><button type="button" class="btn btn-danger">Delete</button></span>
-  <p></p>
-<% end %>
+  <button type="button" class="btn btn-primary span_button_bk">Update</button>
+  <button type="button" class="btn btn-danger span_button_bk">Delete</button>
+  <% end %>
 
-
-<p>MY WATCHES WITH A RENTAL PROPOSITION</p>
-
-
-
-
-
+  </div>
+</div>
 </div>
