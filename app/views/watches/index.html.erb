@@ -16,7 +16,7 @@
                   <div class="hidden-description" >
                     <h3><%= watch.name %></h3>
                     <p class="lorem-et-hardy"><%= watch.description %></p>
-                    <button type="button" class="btn btn-light"><%= link_to "See this watch", watch_path(watch) %></button>
+                    <%= link_to "See this watch", watch_path(watch), class: "btn btn-index" %>
 
                   </div>
                 </div>

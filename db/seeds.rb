@@ -37,7 +37,7 @@ puts "1"
     gender: "man",
     color:"white",
     material:"acier",
-    image:"https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126334-0014.png?impolicy=upright-majesty",
+    remote_image_url:"https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m126334-0014.png?impolicy=upright-majesty",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: ben.id
   )
@@ -52,7 +52,7 @@ puts "2"
     gender: "woman",
     color:"blue",
     material:"diamonds",
-    image:"https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m86285-0001.png?impolicy=upright-majesty",
+    remote_image_url:"https://images.rolex.com/catalogue/images/upright-bba-with-shadow/m86285-0001.png?impolicy=upright-majesty",
     description:"rolex qui se caractérise par la splendeur de son cadran et les somptueux diamants",
     user_id: remy.id
   )
@@ -67,7 +67,7 @@ puts "3"
     gender: "man",
     color:"yellow",
     material:"gold",
-    image:"https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17580804_1_640.jpg",
+    remote_image_url:"https://b34959663f5a3997bd0d-2668915a1d3a077262c88fab6aa0aa02.ssl.cf3.rackcdn.com/17580804_1_640.jpg",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: mathieu.id
   )
@@ -82,7 +82,7 @@ puts "4"
     gender: "man",
     color:"black",
     material:"carbonne",
-    image:"https://www.lepage.fr/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/4/1/411ox1180rx_1.jpg",
+    remote_image_url:"https://www.lepage.fr/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/4/1/411ox1180rx_1.jpg",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: kevin.id
   )
@@ -98,7 +98,7 @@ puts "5"
     gender: "man",
     color:"brown",
     material:"leather",
-    image:"https://upload.wikimedia.org/wikipedia/commons/7/71/Breitling_MG_2683.jpg",
+    remote_image_url:"https://upload.wikimedia.org/wikipedia/commons/7/71/Breitling_MG_2683.jpg",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: joseph.id
   )
@@ -113,7 +113,7 @@ puts "6"
    gender: "man",
    color:"yellow",
    material:"carbonne",
-   image:"http://www.my-watchsite.fr/26098-large_default/rm-27-03-tourbillon-rafael-nadal.jpg",
+   remote_image_url:"http://www.my-watchsite.fr/26098-large_default/rm-27-03-tourbillon-rafael-nadal.jpg",
    description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
    user_id:maxime.id
 
@@ -129,7 +129,7 @@ puts "7"
     gender: "man",
     color:"black",
     material:"acier",
-    image:"http://static2.worldtempus.com/cache/article/s/e/seiko_djokovic_cover_crop_800x600.jpg",
+    remote_image_url:"http://static2.worldtempus.com/cache/article/s/e/seiko_djokovic_cover_crop_800x600.jpg",
     description:"Cet incontournable de la marque Seiko associe l’élégance à l’innovation ",
     user_id: ben.id
   )
@@ -146,7 +146,7 @@ megane = Watch.create(
    gender: "woman",
    color:"white",
    material:"acier",
-   image:"https://www.cartier.fr/content/dam/rcq/car/59/25/81/592581.png",
+   remote_image_url:"https://www.cartier.fr/content/dam/rcq/car/59/25/81/592581.png",
    description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
    user_id: mathieu.id
   )
@@ -161,7 +161,7 @@ puts "9"
    gender: "man",
    color:"red",
    material:"leather",
-   image:"https://lovetime.fr/wp-content/uploads/2014/02/blancpain-leman-flyback-chronograph-2885f-1130-53b-watch-470x400.jpg",
+   remote_image_url:"https://lovetime.fr/wp-content/uploads/2014/02/blancpain-leman-flyback-chronograph-2885f-1130-53b-watch-470x400.jpg",
    description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
    user_id: kevin.id
   )
@@ -176,7 +176,7 @@ puts "10"
     gender: "man",
     color:"gold",
     material:"acier",
-    image:"https://www.magmontres.fr/wp-content/uploads/2015/04/Patek-5175.jpg",
+    remote_image_url:"https://www.magmontres.fr/wp-content/uploads/2015/04/Patek-5175.jpg",
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: joseph.id
   )
