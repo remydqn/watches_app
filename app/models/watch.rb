@@ -1,8 +1,8 @@
 class Watch < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
-  validates :location, presence: true
+  validates :address, presence: true
   validates :user, presence:true
   validates :name, presence: true, uniqueness: true
   validates :description, length: {minimum: 5, maximum: 100}, allow_blank: true, presence: true
@@ -13,5 +13,8 @@ class Watch < ApplicationRecord
   validates :material, inclusion: { in: %w(carbonne leather acier silicone gold diamonds silver)}
   # validates :image
   validates :price, numericality: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
 end
