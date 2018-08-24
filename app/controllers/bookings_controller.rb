@@ -13,17 +13,17 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(params[:id])
+    @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.watch = @watch
-    @booking.save!
-    redirect_to @watches, notice: 'Watch was successfully book.'
+    @booking.watch = Watch.find(params[:watch_id])
+    @booking.save
+    redirect_to booking_path(@booking), notice: 'Watch was successfully book.'
   end
 
   private
 
-  def watch_params
-      params.require(:booking).permit(:price, :image, :description, :brand)
+  def booking_params
+      params.require(:booking).permit(:start_at)
     end
 
 end
