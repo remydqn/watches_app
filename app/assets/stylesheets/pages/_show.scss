@@ -15,9 +15,26 @@
   background-position: center;
 }
 
+.content {
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  padding: 20px;
+
+}
+
 .container h1 {
-  color: gray;
-  font-family: Raleway;
+  color: #b6e1e0;
+  font-family: Nunito;
+}
+
+.button {
+    padding: 30px;
+    margin-top: 20px;
+    color: #ffffff;
+
+}
+
+.h2 {
+ padding: 8px;
 }
 
 .container h2 {

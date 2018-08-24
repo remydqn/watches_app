@@ -1,3 +1,4 @@
+
 <div class="container">
 
 
@@ -40,14 +41,28 @@
     <div class="col-xs-8">
       <div class="content">
         <h1><strong>Name : </strong><%= @watch.name %></h1>
+
         <h2><strong>Description : </strong><%= @watch.description %></h2>
-        <p><strong> Material : </strong><%= @watch.material %></p>
-        <p><strong> Brand : </strong><%= @watch.brand %></p>
-        <p><strong> Color : </strong><%= @watch.color %></p>
-        <p><strong> Price : </strong><%= @watch.price %>€</p>
+
+        <h2><strong> Material : </strong><%= @watch.material %></h2>
+
+        <h2><strong> Brand : </strong><%= @watch.brand %></h2>
+
+        <h2><strong> Color : </strong><%= @watch.color %></h2>
+      <div class="h2">
+          <h2><strong> Price : </strong><%= @watch.price %>€</h2>
+      </div>
+        <h2><strong> Gender : </strong><%= @watch.gender %></h2>
       </div><!-- content-->
-      <div>
+
+      <div class="button">
         <%= link_to "Edit", edit_watch_path(@watch.id) %>
+      </div>
+
+      <div>
+        <% if current_user %>
+          <%= link_to "Delete", watch_path(@watch), method: :delete, data: {confirm: "Are you sure yo #{current_user.name} ? Sure of what you doin you crazy ?"} %>
+        <% end %>
       </div>
     </div><!--col-xs-6 -->
     <div class="col-xs-4 form-watch">
@@ -71,8 +86,7 @@
         </div>
       </div>
         <div class="button-watch">
-          <%= link_to 'Demande de réservation', watches_path %>
-          <%= submit_tag("Demande de réservation") %>
+          <%= link_to 'Demande de réservation', booking_path %>
         </div>
       </div><!-- form_for-->
     </div><!-- col-xs-6-->
