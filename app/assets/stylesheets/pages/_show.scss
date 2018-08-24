@@ -21,37 +21,54 @@
 
 }
 
-.container h1 {
+.container h2 {
   color: #b6e1e0;
   font-family: Nunito;
+  margin-bottom: 40px;
 }
 
 .button {
-    padding: 30px;
-    margin-top: 20px;
-    color: #ffffff;
+  padding: 30px;
+  margin-top: 20px;
+  color: #ffffff;
 
 }
 
-.h2 {
- padding: 8px;
+form {
+  width: 100%
 }
 
-.container h2 {
-  color: black;
+.button-watch {
+  display: block;
+  border-radius: 4px;
+  weight: 100%;
+  text-align: center;
+  padding: 15px;
+  margin-top: 10px;
+  color: white;
+  background-color: #9CD3D3;
+}
+
+.container h4 {
+  color: #151515;
+  text-align: left;
   font-family: Raleway;
+  margin-bottom: 30px;
 }
 
 .container_1{
-   display: flex;
+  display: flex;
   flex-direction: row;
 
 }
 
 .form_for {
-display: flex;
-align-items: center;
-text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
 }
 
 .watch-description {
@@ -59,11 +76,18 @@ padding-top: 40px;
 }
 
 .form-watch {
-padding: 10px;
-box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  padding: 10px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
 }
 
-.form_for {
-padding: 10px;
+.new_booking {
+  width: 100%;
 }
 
+.new_booking select {
+  border-radius: 4px;
+}
+
+.date_2 {
+  text-align: center;
+}
