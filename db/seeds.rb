@@ -11,27 +11,25 @@ User.destroy_all
 
 puts "creation des users"
 
-ben = User.create!(email: "benjaminjolivot@orange.fr", password: "benjoli", name: "benbaker", image:"https://avatars3.githubusercontent.com/u/40176179?s=460&v=4" )
+ben = User.create(email: "benjaminjolivot@orange.fr", password: "benjoli", name: "benbaker", image:"https://avatars3.githubusercontent.com/u/40176179?s=460&v=4" )
 
-remy = User.create!(email: "remywinehouse@free.fr", password: "remywine", name:"remymy", image:"https://avatars3.githubusercontent.com/u/40638311?s=460&v=4")
+remy = User.create(email: "remywinehouse@free.fr", password: "remywine", name:"remymy", image:"https://avatars3.githubusercontent.com/u/40638311?s=460&v=4")
 
-joseph = User.create!(email: "josephta@gmail.com", password: "josepht", name:"joseph", image: "https://avatars2.githubusercontent.com/u/5313828?s=460&v=4")
+joseph = User.create(email: "josephta@gmail.com", password: "josepht", name:"joseph", image: "https://avatars2.githubusercontent.com/u/5313828?s=460&v=4")
 
-mathieu = User.create!(email: "cartosnet@gmail.com", password: "cartosn", name:"mathc", image:"https://avatars3.githubusercontent.com/u/25009165?s=460&v=4")
+mathieu = User.create(email: "cartosnet@gmail.com", password: "cartosn", name:"mathc", image:"https://avatars3.githubusercontent.com/u/25009165?s=460&v=4")
 
-kevin = User.create!(email: "kevcha@sfr.fr", password: "kevcha", name:"kevlemoine", image:"https://avatars2.githubusercontent.com/u/472453?s=460&v=4")
+kevin = User.create(email: "kevcha@sfr.fr", password: "kevcha", name:"kevlemoine", image:"https://avatars2.githubusercontent.com/u/472453?s=460&v=4")
 
-maxime = User.create!(email: "maximepdm@gmail.com", password: "maximep", name:"maxpdm", image:"https://avatars2.githubusercontent.com/u/32811068?s=460&v=4")
-
-
+maxime = User.create(email: "maximepdm@gmail.com", password: "maximep", name:"maxpdm", image:"https://avatars2.githubusercontent.com/u/32811068?s=460&v=4")
 
 
-puts "création des watch"
 
 
-  sarkozy = Watch.create!(
+
+puts "1"
+  sarkozy = Watch.create(
     name: "sarkozy watch",
-
     brand:"rolex",
     price: 200,
     location: "Lyon, place bellcour",
@@ -44,7 +42,8 @@ puts "création des watch"
     user_id: ben.id
   )
 
-  carla =  Watch.create!(
+puts "2"
+  carla =  Watch.create(
     name: "Carla watch",
     brand:"rolex",
     price: 52,
@@ -58,7 +57,8 @@ puts "création des watch"
     user_id: remy.id
   )
 
-  audemars = Watch.create!(
+puts "3"
+  audemars = Watch.create(
     name: "audemars watch",
     brand:"audemars piguet",
     price: 65,
@@ -72,7 +72,8 @@ puts "création des watch"
     user_id: mathieu.id
   )
 
- mourinho = Watch.create!(
+puts "4"
+ mourinho = Watch.create(
     name: "Mourinho hublot",
     brand:"hublot",
     price: 150,
@@ -86,7 +87,8 @@ puts "création des watch"
     user_id: kevin.id
   )
 
-  aviator = Watch.create!(
+puts "5"
+  aviator = Watch.create(
     name: "aviator watch",
 
     brand:"breitling",
@@ -101,7 +103,8 @@ puts "création des watch"
     user_id: joseph.id
   )
 
- nadal = Watch.create!(
+puts "6"
+ nadal = Watch.create(
    name: "Nadal watch",
    brand:"richard mille",
    price: 500,
@@ -116,7 +119,8 @@ puts "création des watch"
 
   )
 
-  novak = Watch.create!(
+puts "7"
+  novak = Watch.create(
     name: "Novak watch",
     brand:"seiko",
     price: 80,
@@ -131,7 +135,8 @@ puts "création des watch"
   )
 
 
-megane = Watch.create!(
+puts "8"
+megane = Watch.create(
    name: "megane watch",
 
    brand:"cartier",
@@ -146,7 +151,8 @@ megane = Watch.create!(
    user_id: mathieu.id
   )
 
- poutine = Watch.create!(
+puts "9"
+ poutine = Watch.create(
    name: "Poutine watch",
    brand:"blancpain",
    price: 500,
@@ -160,7 +166,8 @@ megane = Watch.create!(
    user_id: kevin.id
   )
 
-  remywatch = Watch.create!(
+puts "10"
+  remywatch = Watch.create(
     name: "Remy le berlinois",
     brand:"patek philippe",
     price: 1000,
@@ -176,30 +183,34 @@ megane = Watch.create!(
 puts "creation booking"
 
 
-Booking.create!(
+Booking.create(
   user_id:kevin.id,
   watch_id: sarkozy.id,
   start_at: "20181126101008"
   )
 
-p "================="
-p remy
-Booking.create!(
+p "1================="
+
+Booking.create(
   user_id:remy.id,
   watch_id:carla.id,
   start_at: "20181126101008"
   )
 
-Booking.create!(
+p "2================="
+Booking.create(
   user_id:mathieu.id,
   watch_id:poutine.id,
   start_at: "20181126101008"
   )
 
-Booking.create!(
+p "3================="
+Booking.create(
   user_id:ben.id,
   watch_id:megane.id,
   start_at: "20181126101008"
   )
 
-
+p "================"
+p "---Seed - OK----"
+p "================"
