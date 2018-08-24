@@ -32,7 +32,7 @@ puts "1"
     name: "sarkozy watch",
     brand:"rolex",
     price: 200,
-    location: "Lyon, place bellcour",
+    address: "Lyon, place bellcour",
     style: "ceremony",
     gender: "man",
     color:"white",
@@ -41,13 +41,14 @@ puts "1"
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: ben.id
   )
+  sleep(1)
 
 puts "2"
   carla =  Watch.create(
     name: "Carla watch",
     brand:"rolex",
     price: 52,
-    location: "Paris, arc de triomphe",
+    address: "Paris, arc de triomphe",
     style: "ceremony",
     gender: "woman",
     color:"blue",
@@ -56,13 +57,14 @@ puts "2"
     description:"rolex qui se caractérise par la splendeur de son cadran et les somptueux diamants",
     user_id: remy.id
   )
+  sleep(1)
 
 puts "3"
   audemars = Watch.create(
     name: "audemars watch",
     brand:"audemars piguet",
     price: 65,
-    location: "Lyon, croix rousse",
+    address: "Lyon, croix rousse",
     style: "design",
     gender: "man",
     color:"yellow",
@@ -71,13 +73,14 @@ puts "3"
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: mathieu.id
   )
+  sleep(1)
 
 puts "4"
  mourinho = Watch.create(
     name: "Mourinho hublot",
     brand:"hublot",
     price: 150,
-    location: "Lyon, la part dieu",
+    address: "Lyon, la part dieu",
     style: "design",
     gender: "man",
     color:"black",
@@ -86,6 +89,7 @@ puts "4"
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: kevin.id
   )
+ sleep(1)
 
 puts "5"
   aviator = Watch.create(
@@ -93,7 +97,7 @@ puts "5"
 
     brand:"breitling",
     price: 30,
-    location: "Lyon, fourviere",
+    address: "Lyon, fourviere",
     style: "vintage",
     gender: "man",
     color:"brown",
@@ -102,13 +106,14 @@ puts "5"
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: joseph.id
   )
+  sleep(1)
 
 puts "6"
  nadal = Watch.create(
    name: "Nadal watch",
    brand:"richard mille",
    price: 500,
-   location: "Lyon, la part dieu",
+   address: "Lyon, la part dieu",
    style: "sportswear",
    gender: "man",
    color:"yellow",
@@ -118,13 +123,14 @@ puts "6"
    user_id:maxime.id
 
   )
+ sleep(1)
 
 puts "7"
   novak = Watch.create(
     name: "Novak watch",
     brand:"seiko",
     price: 80,
-    location: "Lyon",
+    address: "Lyon",
     style: "city chic",
     gender: "man",
     color:"black",
@@ -133,15 +139,15 @@ puts "7"
     description:"Cet incontournable de la marque Seiko associe l’élégance à l’innovation ",
     user_id: ben.id
   )
-
+  sleep(1)
 
 puts "8"
 megane = Watch.create(
-   name: "megane watch",
+   name: "Megan watch",
 
    brand:"cartier",
    price: 1000,
-   location: "Cannes",
+   address: "Cannes",
    style: "ceremony",
    gender: "woman",
    color:"white",
@@ -150,28 +156,30 @@ megane = Watch.create(
    description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
    user_id: mathieu.id
   )
+sleep(1)
 
 puts "9"
  poutine = Watch.create(
    name: "Poutine watch",
-   brand:"blancpain",
+   brand:"rolex",
    price: 500,
-   location: "Lyon",
+   address: "Lyon",
    style: "vintage",
    gender: "man",
-   color:"red",
-   material:"leather",
-   remote_image_url:"https://lovetime.fr/wp-content/uploads/2014/02/blancpain-leman-flyback-chronograph-2885f-1130-53b-watch-470x400.jpg",
+   color:"black",
+   material:"acier",
+   image:"https://www.cresus.fr/images-produits/1/415x594/rolex-datejust-montre-automatique-acier-45161.jpg",
    description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
    user_id: kevin.id
   )
+ sleep(1)
 
 puts "10"
   remywatch = Watch.create(
     name: "Remy le berlinois",
     brand:"patek philippe",
     price: 1000,
-    location: "Lyon, la part dieu",
+    address: "Lyon, la part dieu",
     style: "bling bling",
     gender: "man",
     color:"gold",
@@ -180,6 +188,7 @@ puts "10"
     description:"Lorem ipsum dolor sit amet, consectetur adipiscing eli",
     user_id: joseph.id
   )
+  sleep(1)
 puts "creation booking"
 
 
@@ -214,3 +223,4 @@ Booking.create(
 p "================"
 p "---Seed - OK----"
 p "================"
+

@@ -1,12 +1,21 @@
 
 
 <!-- cards -->
-
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+    ></div>
 
 <div class="container">
   <h1 class="text-center">List of watches</h1>
   <div class="cards">
     <div class="row">
+
+    <% if @watches.empty? %>
+    <% else %>
+
       <% @watches.each do |watch|%>
         <div class="col-xs-12 col-sm-4">
 
@@ -14,7 +23,7 @@
               <div class="card-content">
                 <div class="card-image" style="background: url(<%= watch.image %>);">
                   <div class="hidden-description" >
-                    <h3><%= watch.name %></h3>
+                    <h3><%= watch.name %> (<%= watch.address %>)</h3>
                     <p class="lorem-et-hardy"><%= watch.description %></p>
                     <%= link_to "See this watch", watch_path(watch), class: "btn btn-index" %>
 
@@ -23,13 +32,14 @@
                 <ul class="card-stats"></ul>
               </div>
               <div class="card-user">
-                <img src="<%= watch.user.image || 'http://via.placeholder.com/150x150' %>" alt="avatar">
+                <img src=<%= watch.user.image || 'http://via.placeholder.com/150x150' %> alt="avatar">
                 <p><%= watch.user.name %></p>
               </div>
             </div>
 
         </div>
       <% end %>
+    <% end %>
     </div>
   </div>
 </div>
