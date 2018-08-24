@@ -21,7 +21,7 @@
 
             <div class="card">
               <div class="card-content">
-                <div class="card-image">
+                <div class="card-image" style="background-image: url('<%= cl_image_path(watch.image, height:300, crop: :fill) unless watch.image.blank? %>')">
                   <div class="hidden-description" >
                     <h3><%= watch.name %> (<%= watch.address %>)</h3>
                     <p class="lorem-et-hardy"><%= watch.description %></p>
@@ -32,7 +32,7 @@
                 <ul class="card-stats"></ul>
               </div>
               <div class="card-user">
-                <img src=<%= watch.user.image || 'http://via.placeholder.com/150x150' %> alt="avatar">
+                <img src="<%= watch.user.image || 'http://via.placeholder.com/150x150' %>" alt="avatar">
                 <p><%= watch.user.name %></p>
               </div>
             </div>
