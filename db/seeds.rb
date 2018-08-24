@@ -23,6 +23,8 @@ kevin = User.create(email: "kevcha@sfr.fr", password: "kevcha", name:"kevlemoine
 
 maxime = User.create(email: "maximepdm@gmail.com", password: "maximep", name:"maxpdm", image:"https://avatars2.githubusercontent.com/u/32811068?s=460&v=4")
 
+tom = User.create(email: "tom@gmail.com", password: "azerty", name:"tom", image:"https://avatars0.githubusercontent.com/u/33839020?s=460&v=4")
+
 
 
 
@@ -137,7 +139,7 @@ puts "7"
     material:"acier",
     remote_image_url:"http://static2.worldtempus.com/cache/article/s/e/seiko_djokovic_cover_crop_800x600.jpg",
     description:"Cet incontournable de la marque Seiko associe l’élégance à l’innovation ",
-    user_id: ben.id
+    user_id: tom.id
   )
   sleep(1)
 
