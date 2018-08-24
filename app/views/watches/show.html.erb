@@ -70,13 +70,14 @@
         <p><strong><%= @watch.price %></strong>€ par jour </p>
       </div>
       <div class="form_for">
-        <div class="date_1">
-          <%= form_tag("/search", method: "get") do %>
-            <%= label_tag(:q, "Date de début:") %>
-            <%= date_field_tag(:q) %>
+        <div style="border: 1px solid red">
+          <%= simple_form_for([@watch, @booking]) do |f| %>
+            <%= f.input :start_at %>
+            <%= f.button :submit %>
           <% end %>
         </div>
       </div>
+
       <div class="form_for">
         <div class="date_2">
           <%= form_tag("/search", method: "get") do %>
@@ -88,7 +89,10 @@
         <div class="button-watch">
           <%= link_to 'Demande de réservation', booking_path %>
         </div>
+
       </div><!-- form_for-->
+
+
     </div><!-- col-xs-6-->
   <!-- row-->
 </div><!-- container-->
